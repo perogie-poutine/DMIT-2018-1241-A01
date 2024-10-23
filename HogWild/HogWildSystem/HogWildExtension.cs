@@ -30,10 +30,10 @@ namespace HogWildSystem
 
             services.AddDbContext<HogWildContext>(options);
 
-            services.AddTransient<WorkingVersionsServices>((ServiceProvider) => { 
+            services.AddTransient<WorkingVersionsService>((ServiceProvider) => { 
                 var context = ServiceProvider.GetService<HogWildContext>();
 
-                return new WorkingVersionsServices(context);
+                return new WorkingVersionsService(context);
             });
         }
     }

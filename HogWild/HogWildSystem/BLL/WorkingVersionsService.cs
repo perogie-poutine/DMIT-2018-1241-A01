@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace HogWildSystem.BLL
 {
-    class WorkingVersionsServices
+    class WorkingVersionsService
     {
 		#region Fields
 		private readonly HogWildContext _hogWildContext;
 		#endregion
 
-		internal WorkingVersionsServices(HogWildContext hogWildContext)
+		internal WorkingVersionsService(HogWildContext hogWildContext)
 		{
 			_hogWildContext = hogWildContext;
 		}
