@@ -9,3 +9,19 @@
 
 <h3>Introduction to Blazor Page (Review)</h3>
 
+<div>
+    <h3>Demonstartion of using methods</h3>
+
+    @if (string.IsNullOrWhiteSpace(myName))
+    {
+        <p>The random number is odd {@oddEvenValue}</p>
+    }
+    else
+    {
+        <label>@myName</label>
+    }
+
+    <button class="btn-success" @onclick="RandomValue">
+        Random Value
+    </button>
+</div>
