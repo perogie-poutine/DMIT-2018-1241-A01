@@ -1,4 +1,5 @@
-﻿using HogWildSystem.DAL;
+﻿using HogWildSystem.BLL;
+using HogWildSystem.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -28,6 +29,12 @@ namespace HogWildSystem
             // connection string.
 
             services.AddDbContext<HogWildContext>(options);
+
+            services.AddTransient<WorkingVersionsServices>((ServiceProvider) => { 
+                var context = ServiceProvider.GetService<HogWildContext>();
+
+                return new WorkingVersionsServices(context);
+            });
         }
     }
 }
