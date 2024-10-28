@@ -23,6 +23,7 @@ namespace HogWildWebApp.Components.Pages.SamplePages
 
         private void GetWorkingVersions()
         {
+            feedback = string.Empty;
             try
             {
                 workingVersionsView = WorkingVersionsService.GetWorkingVersion();

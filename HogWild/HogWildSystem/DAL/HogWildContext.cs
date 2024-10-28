@@ -102,7 +102,7 @@ internal partial class HogWildContext : DbContext
 
         modelBuilder.Entity<WorkingVersion>(entity =>
         {
-            entity.HasKey(e => e.VersionId).HasName("PK__WorkingV__16C6400FE0DF8E9D");
+            entity.HasKey(e => e.VersionId).HasName("PK__WorkingV__16C6400F0B9E5917");
 
             entity.Property(e => e.Comments).IsFixedLength();
         });
